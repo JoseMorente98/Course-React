@@ -17,7 +17,7 @@ export const SearchScreen = () => {
     })
 
     const { search } = values;
-    const heroesFileted = useMemo(() => getHeroesByName(search), [q]);
+    const heroesFileted = useMemo(() => getHeroesByName(q), [q]);
 
     const handleSearch = (e) => {
         e.preventDefault()

@@ -2,7 +2,7 @@ import { heroes } from "../data/heroes"
 
 export const getHeroesByName = (name = '') => {
 
-    if (name == '') {
+    if (name === '') {
         return [];
     }
     let heroesArr = [];
