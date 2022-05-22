@@ -9,7 +9,6 @@ export const LoginScreen = () => {
 
     const { dispatch } = useContext(AuthContext);
 
-
     const handleLogin = () => {
         const action = {
             type: types.login,
@@ -18,7 +17,10 @@ export const LoginScreen = () => {
             }
         }
         dispatch(action);
-        navigate('/', {
+
+        const lastPath = localStorage.getItem('location') || '/marvel';
+
+        navigate(lastPath, {
             replace: true
         });
     }
